@@ -22,10 +22,28 @@ You can install the packages from a real or a virtual Python environment.
 pip3 install bluepy dtw-python pandas PyQt5 matplotlib scipy scikit-learn
 ```
 
-### Download the code and run
-
+### Download the code from source
 ```bash
 git clone https://github.com/wasdwasd0105/CCHD_2022
-cd CCHD_2022
-python3 main.py
 ```
+
+### Configuration
+The file `Config/config.ini` configs the connection of Nonin Oximeter devices and the CCHD and AWAD model selection. 
+
+To use the project, you need to specify the MAC address of the devices, the filename of the pre-trained models, and their corresponding features. 
+
+```ini
+# config.ini
+[Nonin]
+Hand_MAC = 08:6b:d7:1f:e3:47
+Foot_MAC = 08:6b:d7:1f:d1:62
+
+[AWAD_model]
+model_name = AWAD_RF.joblib
+model_features = 'Sys Ratio','Dias/Sys Ratio','Mid Sys Val','Amplitude'
+
+[CCHD_model]
+model_name = CCHD_self_2f.joblib
+model_features = 'Max_PAI_h','Variance_SPO2_f'
+```
+
