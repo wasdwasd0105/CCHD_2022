@@ -48,7 +48,10 @@ model_features = 'Max_PAI_h','Variance_SPO2_f'
 ```
 
 ## Usage
-
+```bash
+cd CCHD_2022
+python3 main.py
+```
 
 
 ## Feture work
@@ -58,7 +61,7 @@ model_features = 'Max_PAI_h','Variance_SPO2_f'
 
 ## Credit
 
-### A Machine Learning Driven Pipeline for Automated Photoplethysmogram Signal Artifact Detection
+### [A Machine Learning Driven Pipeline for Automated Photoplethysmogram Signal Artifact Detection](https://ieeexplore.ieee.org/document/9697930)
 #### Abstract
 Recent advances in Critical Congenital Heart Dis-
 ease (CCHD) research using Photoplethysmography (PPG) sig-
@@ -78,7 +81,7 @@ of-the-art artifact detection methods tested on higher resolution
 PPG.
 
 
-### Enhanced Critical Congenital Cardiac Disease Screening by Combining Interpretable Machine Learning Algorithms
+### [Enhanced Critical Congenital Cardiac Disease Screening by Combining Interpretable Machine Learning Algorithms](https://ieeexplore.ieee.org/document/9630111)
 #### Abstract
 Critical Congenital Heart Disease (CCHD) screen-
 ing that only uses oxygen saturation (SpO2), measured by pulse
@@ -97,3 +100,7 @@ CCHD screening system, which adds the ML model, improved
 sensitivity by approximately 10 percentage points compared to
 the current standard SpO2-alone method with minimal to no
 impact on specificity.
+
+### [A novel system to collect dual pulse oximetry data for critical congenital heart disease screening research](https://www.cambridge.org/core/journals/journal-of-clinical-and-translational-science/article/novel-system-to-collect-dual-pulse-oximetry-data-for-critical-congenital-heart-disease-screening-research/6AAA3E41E270A41ED3417FBCB8123B41)
+#### Abstract
+Access to patient medical data is critical to building a real-time data analytic pipeline for improving care providers’ ability to detect, diagnose, and prognosticate diseases. Critical congenital heart disease (CCHD) is a common group of neonatal life-threatening defects that must be promptly diagnosed to minimize morbidity and mortality. CCHD can be diagnosed both prenatally and postnatally. However, despite current screening practices involving oxygen saturation analysis, timely diagnosis is missed in approximately 900 infants with CCHD annually in the USA and can benefit from increased data processing capabilities. Adding non-invasive perfusion measurements to oxygen saturation data can improve the timeliness and fidelity of CCHD diagnostics. However, real-time monitoring and interpretation of non-invasive perfusion data are currently limited.
