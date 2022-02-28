@@ -48,6 +48,7 @@ model_features = 'Max_PAI_h','Variance_SPO2_f'
 ```
 
 ## Usage
+Detailed opreation manual can be found under `Decuments` folder 
 ```bash
 cd CCHD_2022
 python3 main.py
