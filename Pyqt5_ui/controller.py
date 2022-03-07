@@ -92,6 +92,8 @@ class MainWindow(QWidget):
             self.start_button.setEnabled(True)
             self.start_button.setStyleSheet('QPushButton {color: rgb(0, 0, 255);}')
             self.start_button.setText("Continue")
+            self.read_patient_info()
+
 
     def create_button(self, text):
         button = QPushButton()

@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 import os
 import sys
 import csv
@@ -34,5 +35,27 @@ for file in file_list:
         pass
     else :
         shutil.copy(os.path.join(patient_folder, file), os.path.join(dest_folder, abcd_id + '-' + file))
+
+id_new = int(abcd_id[1:]) + 1
+abcd = abcd_id[1:] + str(id_new)
+
+filename = os.path.join(DATA_DIR,  ABCD_FILENAME)
+filename2 = os.path.join(DATA_DIR, patient_id, patient_id+'_'+ ABCD_FILENAME)
+time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+if os.path.exists(filename):
+    with open(filename, "a") as f:
+        f.write("{},{},{}\n".format(patient_id,time, abcd))
+else:
+    with open(filename, "w") as f:
+        f.write("Patient_ID,time,abcd\n")
+        f.write("{},{},{}\n".format(patient_id,time, abcd))
+
+if os.path.exists(filename2):
+    with open(filename2, "a") as f:
+        f.write("{},{},{}\n".format(patient_id,time, abcd))
+else:
+    with open(filename2, "w") as f:
+        f.write("Patient_ID,time,abcd\n")
+        f.write("{},{},{}\n".format(patient_id,time, abcd))
 
 os.system('python3 ' + os.path.join(curdir, '..', 'Detection', 'CCHD_detection.py'))
