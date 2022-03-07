@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import (
     QLCDNumber,
     QPushButton,
     QVBoxLayout,
+    QMessageBox,
     QWidget
 )
 
@@ -156,7 +157,11 @@ class MainWindow(QWidget):
             process_bridge.kill()
         except:
             pass
-        subprocess.run(["python3", os.path.join(curdir, '..', 'Recording', 'exam_reset.py')])
+
+        reply = QMessageBox.question(self, 'Reset option', 'Keep current data?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        if reply == QMessageBox.Yes: 
+            subprocess.run(["python3", os.path.join(curdir, '..', 'Recording', 'exam_reset.py')])
+        
         subprocess.run(["python3", os.path.join(curdir, 'ABCD.py')])
         
         self.read_patient_info()
