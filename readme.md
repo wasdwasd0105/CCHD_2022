@@ -56,8 +56,6 @@ python3 main.py
 
 
 ## Feture work
-- Continue train the models using new data.
-- Add fast banchmark script.
 - Replace bluepy with [Bleak](https://github.com/hbldh/bleak) to support mutiple platform (Windows, MacOS, Android).  
 
 ## Credit
