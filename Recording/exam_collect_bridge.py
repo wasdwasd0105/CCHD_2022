@@ -28,16 +28,17 @@ csvFile.close()
 patient_folder = os.path.join(DATA_DIR, patient_id)
 dest_folder = os.path.join(curdir, '..', 'Data', 'tmp', 'Recorded')
 
+id_new = int(abcd_id[1:]) + 1
+abcd = abcd_id[0] + str(id_new)
+
 file_list = sorted(os.listdir(patient_folder))
 for file in file_list:
     match = file.split('_')[1]
     if (match == "interval"):
         pass
     else :
-        shutil.copy(os.path.join(patient_folder, file), os.path.join(dest_folder, abcd_id + '-' + file))
+        shutil.copy(os.path.join(patient_folder, file), os.path.join(dest_folder, abcd + '-' + file))
 
-id_new = int(abcd_id[1:]) + 1
-abcd = abcd_id[1:] + str(id_new)
 
 filename = os.path.join(DATA_DIR,  ABCD_FILENAME)
 filename2 = os.path.join(DATA_DIR, patient_id, patient_id+'_'+ ABCD_FILENAME)
