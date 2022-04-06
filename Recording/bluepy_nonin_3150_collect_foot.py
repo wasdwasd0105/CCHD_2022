@@ -9,7 +9,6 @@ from bluepy.btle import DefaultDelegate, Peripheral
 import configparser
 
 NONIN_SERVICE_UUID = '46a970e00d5f11e28b5e0002a5d5c51b'
-PULSE_OX_CHAR_UUID = '34e2786376ff4f8e96f19e3993aa6199'
 PLETH_CHAR_UUID = 'ec0a883a4d2411e7b114b2f933d5fe66'
 PULSE_OX_CHAR_UUID = '0aad7ea00d6011e28e3c0002a5d5c51b'
 
